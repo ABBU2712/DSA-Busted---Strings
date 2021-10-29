@@ -1,0 +1,13 @@
+#Given a string S, check if it is palindrome or not.
+class Solution:
+	def isPalindrome(self, S):
+		# code here
+		h=len(S)-1
+		l=0
+		while l<h:
+		    if S[l] != S[h]:
+		        return 0
+		    else:
+		        l=l+1
+		        h=h-1
+		return 1
