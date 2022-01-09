@@ -1,0 +1,40 @@
+#Given a string in roman no format (s)  your task is to convert it to an integer
+
+lass Solution:
+    def value(self,r):
+        if r=='I':
+            return 1
+        if r=='V':
+            return 5
+        if r=='X':
+            return 10
+        if r=='L':
+            return 50
+        if r=='C':
+            return 100
+        if r=='D':
+            return 500
+        if r=='M':
+            return 1000
+        return -1
+    
+        
+            
+    def romanToDecimal(self, S): 
+        # code here
+        r=0
+        i=0
+        while i<len(S):
+            a=self.value(S[i])
+            if i+1<len(S):
+                b=self.value(S[i+1])
+                if a >= b:
+                    r += a
+                    i +=1
+                else:
+                    r += b-a
+                    i+=2
+            else:
+                r += a
+                i +=1
+        return r
