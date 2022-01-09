@@ -1,0 +1,9 @@
+#Given two numbers as strings s1 and s2. Calculate their Product.
+
+class Solution:
+    def multiplyStrings(self,s1,s2):
+        # code here
+        # return the product string
+        n1=int(s1)
+        n2=int(s2)
+        return n1*n2
